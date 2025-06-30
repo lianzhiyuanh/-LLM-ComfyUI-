@@ -1,0 +1,24 @@
+# --- 配置 ---
+# 在这里选择要使用的 LLM API 提供商。
+# 可选项: "google", "openai", "third_party"
+LLM_PROVIDER = "google" # 默认为 "google"
+
+# --- 第三方 API 配置 ---
+# 如果选择 "third_party", 请在这里填入你的 API 地址、密钥和模型名称
+THIRD_PARTY_API_BASE = "https://your-third-party-api-base/v1"
+THIRD_PARTY_API_KEY = "sk-your-third-party-api-key"
+THIRD_PARTY_MODEL = "your-third-party-model-name"
+
+# --- Google Gemini 官方 API 配置 ---
+# 如果选择 "google", 请在这里填入你的密钥
+GOOGLE_API_KEY = "your-google-api-key"
+GOOGLE_MODEL = "gemini-1.5-flash"
+
+# --- OpenAI 官方 API 配置 ---
+# 如果选择 "openai", 请在这里填入你的密钥
+OPENAI_API_KEY = "sk-your-openai-api-key"
+OPENAI_API_BASE = "https://api.openai.com/v1"
+OPENAI_MODEL = "gpt-4o"
+
+# --- ComfyUI 服务器地址 ---
+COMFYUI_ADDRESS = "127.0.0.1:8188"

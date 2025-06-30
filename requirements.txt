@@ -1,0 +1,5 @@
+flask
+requests
+websocket-client
+google-generativeai
+openai

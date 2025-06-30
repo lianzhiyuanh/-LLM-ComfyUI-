@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 自动绘画</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI 自动绘画</h1>
+        <p>输入您的绘画想法，让 AI 为您生成详细的提示词并实时绘图。</p>
+        
+        <div class="input-area">
+            <textarea id="idea-input" placeholder="例如：一只白色的猫..."></textarea>
+            <button id="generate-btn">生成图片</button>
+        </div>
+
+        <!-- 高级设置 -->
+        <div class="settings-toggle">
+            <a href="#" id="toggle-settings-btn">高级设置 <i class="fas fa-chevron-down"></i></a>
+        </div>
+
+        <div id="settings-panel" class="hidden">
+            <!-- 预设管理 -->
+            <div class="preset-bar">
+                <label for="preset-select">参数预设:</label>
+                <select id="preset-select"></select>
+                <button id="save-preset-btn" class="icon-btn" title="保存当前设置为新预设"><i class="fas fa-save"></i></button>
+                <button id="delete-preset-btn" class="icon-btn" title="删除当前所选预设"><i class="fas fa-trash-alt"></i></button>
+            </div>
+            
+            <div class="settings-grid">
+                <!-- Workflow -->
+                <div class="setting-item">
+                    <label for="workflow-select">工作流:</label>
+                    <select id="workflow-select">
+                        <option value="default" selected>默认</option>
+                        <option value="face_detailer">面部细化</option>
+                    </select>
+                </div>
+                <!-- Model -->
+                <div class="setting-item">
+                    <label for="model-select">主模型:</label>
+                    <select id="model-select"><option>加载中...</option></select>
+                </div>
+                <!-- Sampler -->
+                <div class="setting-item">
+                    <label for="sampler-select">采样器:</label>
+                    <select id="sampler-select"><option>加载中...</option></select>
+                </div>
+                <!-- Steps -->
+                <div class="setting-item">
+                    <label for="steps-input">步数:</label>
+                    <input type="number" id="steps-input" value="25" min="1" max="100">
+                </div>
+                <!-- CFG -->
+                <div class="setting-item">
+                    <label for="cfg-input">CFG:</label>
+                    <input type="number" id="cfg-input" value="7.0" step="0.1" min="1" max="20">
+                </div>
+                <!-- Width -->
+                <div class="setting-item">
+                    <label for="width-input">宽度:</label>
+                    <input type="number" id="width-input" value="1024" step="64">
+                </div>
+                <!-- Height -->
+                <div class="setting-item">
+                    <label for="height-input">高度:</label>
+                    <input type="number" id="height-input" value="1024" step="64">
+                </div>
+            </div>
+             <textarea id="fixed-prompt-input" placeholder="固定正面提示词 (会被添加到AI生成关键词的最前面)"></textarea>
+             <textarea id="negative-prompt-input" placeholder="自定义负向提示词 (留空则使用默认)"></textarea>
+        </div>
+        
+        <div class="result-area">
+            <div id="loading-spinner" class="hidden"></div>
+            <div id="description-container" class="hidden result-box">
+                <h3><i class="fas fa-magic"></i> AI 场景描写</h3>
+                <p id="description-display"></p>
+            </div>
+            <div id="prompt-display-container" class="hidden result-box">
+                <h3><i class="fas fa-tags"></i> 最终绘画关键词</h3>
+                <p id="prompt-display"></p>
+            </div>
+            <div id="image-display"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

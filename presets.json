@@ -1,0 +1,24 @@
+{
+    "默认设置": {
+        "workflow": "default",
+        "model": "",
+        "sampler": "dpmpp_2m_sde",
+        "steps": 25,
+        "cfg": 7,
+        "width": 1024,
+        "height": 1024,
+        "fixed_prompt": "masterpiece, best quality, highres",
+        "negative_prompt": "worst quality, low quality"
+    },
+    "默认1": {
+        "workflow": "default",
+        "model": "waiNSFWIllustrious_v120.safetensors",
+        "sampler": "euler",
+        "steps": 25,
+        "cfg": 4.5,
+        "width": 1280,
+        "height": 1620,
+        "fixed_prompt": "(artist:modare:1.1), artist:kyokucho , artist:kawakami_rokkaku ,artist:everyntrge ,(artist:quasarcake:1.1) ,(artist:ciloranko:1.1),(artist: na_tarapisu153:0.8) ,\nmasterpiece, best quality, amazing quality, very aesthetic, absurdres,  newest,",
+        "negative_prompt": "lowres, bad quality, worst quality, bad anatomy, sketch, jpeg artifacts, ugly, poorly drawn, censor,blurry, watermark,simple background, transparent background,halo,embedding:NEGATIVE_HANDS,bad hands,"
+    }
+}
