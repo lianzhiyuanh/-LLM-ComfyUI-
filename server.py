@@ -169,19 +169,6 @@ WORKFLOWS = {
         "8": {"inputs": {"samples": ["3", 0], "vae": ["4", 2]}, "class_type": "VAEDecode"},
         "9": {"inputs": {"filename_prefix": "autodraw_app", "images": ["8", 0]}, "class_type": "SaveImage"}
     },
-    "face_detailer": {
-        "3": {"inputs": {"seed": 0, "steps": 25, "cfg": 7.0, "sampler_name": "dpmpp_2m_sde", "scheduler": "karras", "denoise": 1, "model": ["39", 0], "positive": ["39", 1], "negative": ["7", 0], "latent_image": ["5", 0]}, "class_type": "KSampler"},
-        "5": {"inputs": {"width": 1024, "height": 1024, "batch_size": 1}, "class_type": "EmptyLatentImage"},
-        "7": {"inputs": {"text": "", "clip": ["14", 1]}, "class_type": "CLIPTextEncode"},
-        "8": {"inputs": {"samples": ["3", 0], "vae": ["14", 2]}, "class_type": "VAEDecode"},
-        "14": {"inputs": {"ckpt_name": "anything-v5-PrtRE.safetensors"}, "class_type": "CheckpointLoaderSimple"},
-        "23": {"inputs": {"model_name": "bbox/face_yolov8m.pt"}, "class_type": "UltralyticsDetectorProvider"},
-        "25": {"inputs": {"model_name": "sam_vit_b_01ec64.pth", "device_mode": "AUTO"}, "class_type": "SAMLoader"},
-        "26": {"inputs": {"model_name": "segm/person_yolov8m-seg.pt"}, "class_type": "UltralyticsDetectorProvider"},
-        "30": {"inputs": {"filename_prefix": "autodraw_app_detail", "images": ["35", 0]}, "class_type": "SaveImage"},
-        "35": {"inputs": {"guide_size": 512, "guide_size_for": True, "max_size": 1024, "seed": 0, "steps": 25, "cfg": 7.0, "sampler_name": "dpmpp_2m_sde", "scheduler": "normal", "denoise": 0.5, "feather": 5, "noise_mask": True, "force_inpaint": True, "bbox_threshold": 0.5, "bbox_dilation": 10, "bbox_crop_factor": 3, "sam_detection_hint": "center-1", "sam_dilation": 0, "sam_threshold": 0.93, "sam_bbox_expansion": 0, "sam_mask_hint_threshold": 0.7, "sam_mask_hint_use_negative": "False", "drop_size": 10, "wildcard": "", "cycle": 1, "inpaint_model": False, "noise_mask_feather": 20, "image": ["8", 0], "model": ["39", 0], "clip": ["14", 1], "vae": ["14", 2], "positive": ["39", 1], "negative": ["7", 0], "bbox_detector": ["23", 0], "sam_model_opt": ["25", 0], "segm_detector_opt": ["26", 1]}, "class_type": "FaceDetailer"},
-        "39": {"inputs": {"text": ""}, "class_type": "CLIPTextEncode"}
-    }
 }
 
 # --- 辅助函数 ---
