@@ -34,7 +34,6 @@
 
 ✨ 效果展示：
 ![屏幕截图 2025-06-30 100055](https://github.com/user-attachments/assets/4e97552a-0493-416a-b64b-b49f3178b717)
-![屏幕截图 2025-06-30 100101](https://github.com/user-attachments/assets/d0e922d0-431e-4bcb-bfad-392e89d4142f)
 ![屏幕截图 2025-06-30 100115](https://github.com/user-attachments/assets/5b2e0ebe-94d2-49db-9c1e-4e95b4655cf3)
 
 
